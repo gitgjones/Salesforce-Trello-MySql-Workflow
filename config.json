@@ -1,0 +1,168 @@
+{
+    "appName" : "trelloSalesforceReconcile",
+    "author" : "Gareth Jones",
+    "auth" :{
+        "trello":{
+            "key":"<add key here>",
+            "token":"<add token here>",
+            "allowedIPs":[
+                {
+                    "ip":"107.23.104.115"    
+                },
+                {
+                    "ip":"107.23.149.70"
+                },
+                {
+                    "ip":"54.152.166.250"
+                },
+                {
+                    "ip":"54.164.77.56"
+                },
+                {
+                    "ip":"54.209.149.230"
+                },
+                {
+                    "ip":"18.234.32.224"
+                },
+                {
+                    "ip":"18.234.32.225"
+                },
+                {
+                    "ip":"18.234.32.226"
+                },
+                {
+                    "ip":"18.234.32.227"
+                },
+                {
+                    "ip":"18.234.32.228"
+                },
+                {
+                    "ip":"18.234.32.229"
+                },
+                {
+                    "ip":"18.234.32.230"
+                },
+                {
+                    "ip":"18.234.32.231"
+                },
+                {
+                    "ip":"18.234.32.232"
+                },
+                {
+                    "ip":"18.234.32.233"
+                },
+                {
+                    "ip":"18.234.32.234"
+                },
+                {
+                    "ip":"18.234.32.235"
+                },
+                {
+                    "ip":"18.234.32.236"
+                },
+                {
+                    "ip":"18.234.32.237"
+                },
+                {
+                    "ip":"18.234.32.238"
+                },
+                {
+                    "ip":"18.234.32.239"
+                }
+            ]
+        },
+        "salesforce":{
+            "username":"<add username here>",
+            "password":"<add password here>",
+            "token":"<add token here>"
+        },
+        "database":{
+            "host":"<database server IP>",
+            "user":"<database username>",
+            "password":"<database password>",
+            "database":"<database name>",
+            "table":"<table name>"
+        }
+    },
+    "params":{
+        "salesforceReportID":"<report ID>",
+        "salesforceReportIDtest":"<report ID>",
+        "salesforceReportIDbackup":"<report ID>",
+        "trelloBoardIDtest":"<trello board ID>",
+        "trelloBoardID":"<trello board ID>"
+    },
+    "customFields":[
+        {
+            "fieldnameSalesforce":"Field Name in Salesforce",
+            "fieldnameDatabase":"field_name_in_database",
+            "fieldnameTrello":"Field Name in Trello",
+            "id":"<trello field ID>",
+            "idTest":"<trello field ID>",
+            "type":"text",
+            "stripspecial":"true",
+            "payload":"",
+            "includeinreport":"true",
+            "reportcolumn":6,
+            "suppressChange":"true",
+            "fieldDataSource":"salesforce/trello/database"
+        },
+        {
+            "fieldnameSalesforce":"",
+            "fieldnameDatabase":"<URL example>",
+            "fieldnameTrello":"<URL example>",
+            "id":"<trello field ID>",
+            "idTest":"<trello field ID>",
+            "type":"text",
+            "stripspecial":"false",
+            "payload":"https://ctl.my.salesforce.com/",
+            "includeinreport":"true",
+            "reportcolumn":13,
+            "suppressChange":"true",
+            "fieldDataSource":"salesforce/trello/database"
+        },
+        {
+            "fieldnameSalesforce":"Trello list example",
+            "fieldnameDatabase":"Trello list example",
+            "fieldnameTrello":"Trello list example",
+            "id":"<trello ID>",
+            "idTest":"<trello ID>",
+            "type":"list",
+            "listOptions":[
+                {
+                    "listOptionID":"<trello ID 1>",
+                    "listOptionValue":"<trello value>"
+                },
+                {
+                    "listOptionID":"<trello ID 2>",
+                    "listOptionValue":"<trello value>"
+                },
+                {
+                    "listOptionID":"<trello ID 3>",
+                    "listOptionValue":"<trello value>"
+                }
+            ],
+            "stripspecial":"false",
+            "payload":"",
+            "includeinreport":"true",
+            "reportcolumn":15,
+            "suppressChange":"true",
+            "fieldDataSource":"database"
+        }
+    ],
+    "listConfig":[
+        {
+            "listName":"Trello list 1",
+            "id":"<trello ID>",
+            "idTest":"<trello ID for test board",
+            "listStatus":"<Friendly name for work items in this list>",
+            "ignore":"false"
+        },
+        {
+            "listName":"Trello list 2",
+            "id":"<trello ID>",
+            "idTest":"<trello ID for test board",
+            "listStatus":"<Friendly name for work items in this list>",
+            "ignore":"false"
+        }
+    ]
+}
